@@ -24,10 +24,12 @@ contract KikiToken is LimitedTokensPerWallet, RandomlyAssigned, WithContractMeta
         RandomlyAssigned(10, 1)
         WithContractMetaData(uri)
         WithSaleStart(1735686000)
-    {}
+    {
+        require(bytes(uri).length > 0, "necesitas pasar la URI del metadato del NFT");
+    }
 
     function claim() external payable ensureAvailability afterSaleStart {
-        require(msg.value == 10000000000000000, "Necesitas pagar exactemente 0.01 para hacer el mint del NFT"); // 10000000000000000 wei = 0.01 Ether
+        require(msg.value >= 0.09 ether, "Necesitas pagar exactemente 0.01 para hacer el mint del NFT"); // 10000000000000000 wei = 0.01 Ether
         uint256 newTokenId = nextToken(); // Create a new token ID
         _mint(msg.sender, newTokenId);
     }
