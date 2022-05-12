@@ -1,0 +1,12 @@
+{
+    "attributes" : [ {
+      "outer_figure" : "Square",
+      "color" : "Black"
+    }, {
+      "inner_figuree" : "Circle",
+      "color" : "White"
+    } ],
+    "description" : "Geometric figures grouped",
+    "image" : "https://gateway.pinata.cloud/ipfs/QmbMo7uSt7YcT63bBaRmMXMqn3c2seQbTYUDfQpRaqoEAZ",
+    "name" : "Bayro Neutral Colors"
+}
